@@ -1,0 +1,80 @@
+                                 ---MADE BY IBXCONRBX ON ROBLOX---
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BcnHub (Made By iBxconRBX On Roblox)", "BloodTheme")
+
+--MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("BTools (Client)", "only u can see it", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/F3X.lua"))()
+    end)
+    
+    MainSection:NewButton("IceHub", "Supports Multiple Games!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iimateiYT/Scripts/main/F3X.lua"))()
+    end)
+
+
+MainSection:NewButton("Infinite Yield Admin", "FE Infinite Yield Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("Prison Life Tiger Admin", "The Best FE Prison Life Admin Commands Script", function()
+    loadstring(game:HttpGet(('https:/raw.githubusercontent.com/h17s3/TIGERADMIN/main/TIGERADMINSCRIPTFREE'),true))()
+end)
+
+--LOCAL PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+    
+PlayerSection:NewToggle("2x Walkspeed", "makes you walk 2x", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+PlayerSection:NewToggle("2x Jump", "makes you jump 2x", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+PlayerSection:NewToggle("Infinite Jump", "Infinite Jump Script", function(state)
+    local thing = Instance.new("Part")
+    thing.Name = "This is a part of the game"
+    thing.Anchored = true
+    thing.Parent = game.Workspace
+    thing.Size = Vector3.new(5, 0.1, 5)
+    thing.Transparency = 1
+game:GetService("RunService").Stepped:connect(
+        function()
+        local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    thing.CFrame = CFrame.new(pos.X, pos.Y-3.3,pos.Z)--beetween -3.1 and idk but prob -3.6
+    end)
+    end)
+
+--Others
+local Others = Window:NewTab("Others")
+local OtherSection = Others:NewSection("Others")
+
+    OtherSection:NewButton("Infinite Yield Admin", "FE Infinite Yield Admin Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end)
+
+--Others
+local Mobile = Window:NewTab("Mobile Scripts")
+local MobileSection = Mobile:NewSection("Mobile Scripts")
+
+  MobileSection:NewButton("Fly Gui", "FE Fly For Mobile", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
+MobileSection:NewButton("Keyboard Script", "Keyboard Script For Mobile Users!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
